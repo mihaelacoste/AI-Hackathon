@@ -1,4 +1,4 @@
-# app.py - AI Expense Tracker Streamlit UI (Final Plotly Version)
+# app.py - AI Expense Tracker Streamlit UI
 
 import streamlit as st
 import pandas as pd
@@ -46,10 +46,10 @@ st.title("AI Expense Tracker Hackathon Project")
 # --- 1. API Key Status (Secure Display) ---
 # st.subheader("API Status")
 if st.session_state.gemini_api_key:
-    # st.success("✅ Gemini API Key loaded securely from GEMINI_API_KEY environment variable.")
+    # st.success("Gemini API Key loaded securely from GEMINI_API_KEY environment variable.")
     is_api_key_set = True
 else:
-    # st.error("❌ GEMINI_API_KEY environment variable not set. Please set it in your terminal to enable AI features.")
+    # st.error("GEMINI_API_KEY environment variable not set. Please set it in your terminal to enable AI features.")
     is_api_key_set = False
 
 
@@ -83,7 +83,7 @@ if st.button("Submit", use_container_width=True, disabled=not is_api_key_set):
                     st.warning(message)
                     
             except Exception as e:
-                st.error(f"❌ API Error during parsing: {e}")
+                st.error(f"API Error during parsing: {e}")
                 
         # Clear the input area and refresh the DataFrame cache
         st.session_state.expense_input_content = ""
@@ -140,7 +140,7 @@ if st.button("Ask for a filter or line/pie chart", use_container_width=True, dis
                     st.session_state.chart_fig = image_figure
                     
             except Exception as e:
-                st.error(f"❌ API Error during command execution: {e}")
+                st.error(f"API Error during command execution: {e}")
                 
         # Clear the query input and refresh data
         st.session_state.agent_query_content = ""
