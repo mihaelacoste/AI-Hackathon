@@ -1,4 +1,4 @@
-# AI_hackathon.py - Core Expense Tracker Logic and Gemini Agent Integration (Final Plotly Version)
+# AI_hackathon.py - Core Expense Tracker Logic and Gemini Agent Integration
 
 import datetime
 import re
@@ -162,7 +162,7 @@ def plot_spending_trend(**kwargs):
     plt.close('all') # Aggressive cleanup for Streamlit stability
     return fig
 
-# --- 4. GEMINI AGENT LOGIC (Zero-Shot Approach) ---
+# --- 4. GEMINI AGENT LOGIC ---
 
 TOOL_MAP = {
     "filter": filter_expenses,
