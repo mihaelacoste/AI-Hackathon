@@ -7,6 +7,7 @@ Create an Expense tracker – CRUD plus charts
 
 How to run:
 export GEMINI_API_KEY='API_KEY_here'
+
 streamlit run app.py
 
 	
